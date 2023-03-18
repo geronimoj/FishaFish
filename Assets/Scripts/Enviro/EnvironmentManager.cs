@@ -57,6 +57,18 @@ namespace Environment
             LoadSavedata();
         }
         /// <summary>
+        /// Load any saved data
+        /// </summary>
+        private static void LoadSavedata()
+        {
+            _isLoading = true;
+            // Load the caught fish. We flag as loading to ensure the unlock sequences are instant
+            int caught = PlayerPrefs.GetInt(FISH_CAUGH_KEY, 0);
+            OnCatchFish(caught);
+
+            _isLoading = false;
+        }
+        /// <summary>
         /// Invoke when you catch a fish
         /// </summary>
         /// <param name="fishCaught">The total number of fish that have been caught over the lifetime of the game</param>
@@ -88,18 +100,6 @@ namespace Environment
                 directior.time = directior.playableAsset.duration;
 
             directior.Play();
-        }
-        /// <summary>
-        /// Load any saved data
-        /// </summary>
-        private static void LoadSavedata()
-        {
-            _isLoading = true;
-            // Load the caught fish. We flag as loading to ensure the unlock sequences are instant
-            int caught = PlayerPrefs.GetInt(FISH_CAUGH_KEY, 0);
-            OnCatchFish(caught);
-
-            _isLoading = false;
         }
     }
 }
