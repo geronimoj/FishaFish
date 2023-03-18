@@ -41,6 +41,7 @@ public class FishingManager : MonoBehaviour
 
     public void Update()
     {
+        //Begins fishing when the player presses the space bar
         if (Input.GetKeyDown(KeyCode.Space) && !fishing)
         {
             StartFishing();

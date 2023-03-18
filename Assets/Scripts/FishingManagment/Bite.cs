@@ -55,6 +55,7 @@ public class Bite : MonoBehaviour
 
     public void Update()
     {
+        //Progress the fishing timer while fishing
         if (isFishing)
         {
             fishTimer += Time.deltaTime;
@@ -62,6 +63,7 @@ public class Bite : MonoBehaviour
             if (fishTimer >= biteTime)
                 ReelBegin();
         }
+        //
         else if (isReeling)
         {
             reelTimer += Time.deltaTime;
