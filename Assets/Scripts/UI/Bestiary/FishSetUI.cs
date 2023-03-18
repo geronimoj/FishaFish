@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Fishing.UI
 {
@@ -11,17 +12,21 @@ namespace Fishing.UI
     {
         [SerializeField] FishBeastUI _fishUIPrefab = null;
         [SerializeField] Grid _fishParent = null;
+        [SerializeField] TMP_Text _setName = null;
 
         FishSet _set = null;
         bool _completedSet = false;
 
         public void Initialize(FishSet set)
         {   // Initialize Fish
-            foreach(var fish in set.FishInSet)
+            foreach (var fish in set.FishInSet)
             {
                 var ui = Instantiate(_fishUIPrefab, _fishParent.transform);
                 ui.Initialize(fish);
             }
+
+            if (_setName)
+                _setName.text = set ? set.SetName : null;
 
             _set = set;
             _completedSet = set.FinishedSet;
