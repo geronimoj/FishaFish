@@ -2,10 +2,12 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
 
 namespace Environment
 {
+    /// <summary>
+    /// Manages cosmetic unlocks
+    /// </summary>
     public class EnvironmentManager : MonoBehaviour
     {
         public struct UnlockInfo
@@ -20,7 +22,15 @@ namespace Environment
         /// <summary>
         /// Queue used to track unlocks left
         /// </summary>
-        static Queue<UnlockInfo> _unlockQueue = null;
+        private static Queue<UnlockInfo> _unlockQueue = null;
+        /// <summary>
+        /// Key used for saving how many fish have been caught
+        /// </summary>
+        public const string FISH_CAUGH_KEY = "F";
+        /// <summary>
+        /// Are we currently loading
+        /// </summary>
+        private static bool _isLoading = false;
 
         private void Awake()
         {
@@ -43,6 +53,8 @@ namespace Environment
                 d.Pause();
                 d.gameObject.SetActive(false);
             }
+
+            LoadSavedata();
         }
         /// <summary>
         /// Invoke when you catch a fish
@@ -57,7 +69,7 @@ namespace Environment
                 if (fishCaught >= info._fishCaughtToUnlock)
                 {   //Already unlocked so dequeue
                     _unlockQueue.Dequeue();
-                    PlayUnlockSequence(info._unlockAnimation);
+                    PlayUnlockSequence(info._unlockAnimation, _isLoading);
                 }
                 else
                     break;
@@ -76,6 +88,18 @@ namespace Environment
                 directior.time = directior.playableAsset.duration;
 
             directior.Play();
+        }
+        /// <summary>
+        /// Load any saved data
+        /// </summary>
+        private static void LoadSavedata()
+        {
+            _isLoading = true;
+            // Load the caught fish. We flag as loading to ensure the unlock sequences are instant
+            int caught = PlayerPrefs.GetInt(FISH_CAUGH_KEY, 0);
+            OnCatchFish(caught);
+
+            _isLoading = false;
         }
     }
 }
