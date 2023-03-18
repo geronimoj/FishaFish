@@ -66,7 +66,7 @@ public class Bite : MonoBehaviour
         {
             reelTimer += Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 isReeling = false;
 

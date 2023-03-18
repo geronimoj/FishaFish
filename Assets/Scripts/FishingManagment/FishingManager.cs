@@ -41,7 +41,7 @@ public class FishingManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !fishing)
+        if (Input.GetKeyDown(KeyCode.Space) && !fishing)
         {
             StartFishing();
         }
