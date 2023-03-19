@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3328749524257735538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3328749524257735502}
+  - component: {fileID: 3328749524257735537}
+  - component: {fileID: 3328749524257735536}
+  - component: {fileID: 3328749524257735539}
+  - component: {fileID: 3328749524257735503}
+  m_Layer: 0
+  m_Name: FishingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3328749524257735502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328749524257735538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3328749524257735537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328749524257735538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e1c65d0726a3c439aae9f8130a7160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CastEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BiteEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EscapeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BeginCatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  FinishCatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  fish: {fileID: 0}
+--- !u!114 &3328749524257735536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328749524257735538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4446b382841425b40afb4b1d0f820b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReelWindow: 4
+--- !u!114 &3328749524257735539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328749524257735538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337ca57a54f97c640ab6bb7a069c20e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CatchType: 0
+  ProgressRequired: 100
+  CatchBarMax: 50
+  CatchRange: 10
+--- !u!114 &3328749524257735503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328749524257735538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46fb59e1826395048859559a064c2052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishSetData: []
+  OnGameFinished:
+    m_PersistentCalls:
+      m_Calls: []
