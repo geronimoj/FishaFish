@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Environment;
 
 public class AvailableFishManager : MonoBehaviour
 {
@@ -24,6 +25,19 @@ public class AvailableFishManager : MonoBehaviour
 	/// Called when the game finishes
 	/// </summary>
 	public UnityEvent OnGameFinished;
+
+	/// <summary>
+	/// Key used for saving how many fish have been caught
+	/// </summary>
+	public const string FISH_CAUGH_KEY = "F";
+	/// <summary>
+	/// The number of fish that have been caught.
+	/// </summary>
+	private static int _caughtFish = 0;
+	/// <summary>
+	/// The number of fish that have been caught.
+	/// </summary>
+	public static int CaughtFigh => _caughtFish;
 
 	List<FishSet> GetActiveFishSets()
 	{
@@ -73,6 +87,9 @@ public class AvailableFishManager : MonoBehaviour
 				CatchFish(f);
 			}
 		}
+		//Load fish caught and use to calculate environment unlocks
+		_caughtFish = PlayerPrefs.GetInt(FISH_CAUGH_KEY, 0);
+		EnvironmentManager.LoadAlreadyUnlocked(_caughtFish);
 	}
 
 	/// <summary>
@@ -81,8 +98,11 @@ public class AvailableFishManager : MonoBehaviour
 	/// <param name="f"></param>
 	void OnFishCaught(Fish f)
 	{
+		_caughtFish++;
+		PlayerPrefs.SetInt(FISH_CAUGH_KEY, _caughtFish);
 		PlayerPrefs.SetInt(f.FishName, 1);
 		CatchFish(f);
+		EnvironmentManager.OnCatchFish(_caughtFish);
 
 		if (GetActiveFishSets().Count == 0)
 		{

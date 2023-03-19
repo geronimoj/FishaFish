@@ -24,10 +24,6 @@ namespace Environment
         /// </summary>
         private static Queue<UnlockInfo> _unlockQueue = null;
         /// <summary>
-        /// Key used for saving how many fish have been caught
-        /// </summary>
-        public const string FISH_CAUGH_KEY = "F";
-        /// <summary>
         /// Are we currently loading
         /// </summary>
         private static bool _isLoading = false;
@@ -53,20 +49,6 @@ namespace Environment
                 d.Pause();
                 d.gameObject.SetActive(false);
             }
-
-            LoadSavedata();
-        }
-        /// <summary>
-        /// Load any saved data
-        /// </summary>
-        private static void LoadSavedata()
-        {
-            _isLoading = true;
-            // Load the caught fish. We flag as loading to ensure the unlock sequences are instant
-            int caught = PlayerPrefs.GetInt(FISH_CAUGH_KEY, 0);
-            OnCatchFish(caught);
-
-            _isLoading = false;
         }
         /// <summary>
         /// Invoke when you catch a fish
@@ -86,6 +68,18 @@ namespace Environment
                 else
                     break;
             }
+        }
+        /// <summary>
+        /// Load environment cosmetics that are already unlocked
+        /// </summary>
+        /// <param name="fishCaught"></param>
+        public static void LoadAlreadyUnlocked(int fishCaught)
+        {
+            _isLoading = true;
+
+            OnCatchFish(fishCaught);
+
+            _isLoading = false;
         }
         /// <summary>
         /// Plays the unlock sequence for a cosmetic
