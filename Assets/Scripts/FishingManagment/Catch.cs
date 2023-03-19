@@ -67,7 +67,7 @@ public class Catch : MonoBehaviour
 
     public void Update()
     {
-        if(CatchType == catchType.RangeCatch)
+        if (CatchType == catchType.RangeCatch)
         {
 
         }
