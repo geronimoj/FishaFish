@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CatchType: 0
+  ProgressRequired: 100
+  CatchBarMax: 50
+  CatchRange: 10
 --- !u!114 &156060510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4446b382841425b40afb4b1d0f820b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxFishTime: 0
-  MinFishTime: 0
   ReelWindow: 4
 --- !u!114 &156060511
 MonoBehaviour:
@@ -182,6 +183,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e1c65d0726a3c439aae9f8130a7160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CastEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BiteEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EscapeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BeginCatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  FinishCatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  fish: {fileID: 0}
 --- !u!4 &156060512
 Transform:
   m_ObjectHideFlags: 0

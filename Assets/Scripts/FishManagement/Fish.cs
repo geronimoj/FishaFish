@@ -17,6 +17,23 @@ public class Fish : ScriptableObject
 
     private bool caught = false;
 
+    /// <summary>
+    /// The longest time it can take for a fish to bite
+    /// </summary>
+    [Tooltip("The longest time it can take for a fish to bite")]
+    public float MaxFishTime;
+    /// <summary>
+    /// The shortest time it can take for a fish to bite
+    /// </summary>
+    [Tooltip("The shortest time it can take for a fish to bite")]
+    public float MinFishTime;
+
+    /// <summary>
+    /// The space that the fish occupies in the catch bar
+    /// </summary>
+    [Tooltip("The space that the fish occupies in the catch bar")]
+    public float FishRange;
+
     public bool Caught
     {
         get => caught;
