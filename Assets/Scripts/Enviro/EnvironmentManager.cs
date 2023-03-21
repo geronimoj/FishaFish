@@ -8,8 +8,10 @@ namespace Environment
     /// <summary>
     /// Manages cosmetic unlocks
     /// </summary>
+    [DefaultExecutionOrder(-100)] // Run before AvailableFishingManager
     public class EnvironmentManager : MonoBehaviour
     {
+        [System.Serializable]
         public struct UnlockInfo
         {
             public int _fishCaughtToUnlock;
@@ -58,6 +60,9 @@ namespace Environment
         {   // Unlock everything that should be unlocked
             while (true)
             {
+                if (_unlockQueue.Count == 0)
+                    return;
+
                 var info = _unlockQueue.Peek();
 
                 if (fishCaught >= info._fishCaughtToUnlock)
