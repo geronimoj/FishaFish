@@ -139,7 +139,7 @@ Material:
     m_Floats:
     - MinDepthDifference: 0.0005
     - SampleRange: 0.01
-    - Thickness: 0.001
+    - Thickness: 0.0005
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
