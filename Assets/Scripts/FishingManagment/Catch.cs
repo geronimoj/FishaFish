@@ -7,8 +7,10 @@ public class Catch : MonoBehaviour
     /// <summary>
     /// A reference to the instance with the correct settings
     /// </summary>
+    [HideInInspector]
     public static Catch instance;
 
+    #region Catch Variables
     /// <summary>
     /// What is the minigame you want to play after you've begun catch phase
     /// </summary>
@@ -29,7 +31,29 @@ public class Catch : MonoBehaviour
     /// </summary>
     [Tooltip("The minigame that begins once the player reaches catch phase")]
     public catchType CatchType;
+    /// <summary>
+    /// How close the player is to catching the fish
+    /// </summary>
+    private float catchProgress;
+    /// <summary>
+    /// The amount of progress the player must reach before the fish is caught
+    /// </summary>
+    [Tooltip("The amount of progress the player must reach before the fish is caught")]
+    public float ProgressRequired;
+    #endregion
 
+    #region Range Catching Variables
+    /// <summary>
+    /// The highest value the fishRange or catchRange can get before being stopped
+    /// </summary>
+    [Tooltip("The highest value the fishRange or catchRange can get before being stopped")]
+    public float CatchBarMax;
+    /// <summary>
+    /// The value range of which you must keep the fishes value within in order to gain catch progress
+    /// </summary>
+    [Tooltip("The value range of which you must keep the fishes value within in order to gain catch progress")]
+    public float CatchRange;
+    #endregion
 
     public void Start()
     {
@@ -39,6 +63,14 @@ public class Catch : MonoBehaviour
             instance = this;
         else if (instance != null && instance != this)
             Destroy(this.gameObject);
+    }
+
+    public void Update()
+    {
+        if (CatchType == catchType.RangeCatch)
+        {
+
+        }
     }
 
     /// <summary>
@@ -60,7 +92,9 @@ public class Catch : MonoBehaviour
 
     void SucceedCatch()
     {
-        Debug.Log("You dun did it");
+        Debug.Log("You caught a " + FishingManager.instance.fish.FishName + "!");
+        FishingManager.instance.FinishCatchEvent.Invoke();
+        AvailableFishManager.instance.OnFishCaught(FishingManager.instance.fish);
         FishingManager.instance.FinishFishing();
     }
 }
