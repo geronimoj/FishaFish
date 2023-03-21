@@ -96,7 +96,7 @@ public class AvailableFishManager : MonoBehaviour
 	/// DYLAN CALL THIS FUNCTION WHEN YOU CATCH A FISH
 	/// </summary>
 	/// <param name="f"></param>
-	void OnFishCaught(Fish f)
+	public void OnFishCaught(Fish f)
 	{
 		_caughtFish++;
 		PlayerPrefs.SetInt(FISH_CAUGH_KEY, _caughtFish);

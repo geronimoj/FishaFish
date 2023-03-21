@@ -10,16 +10,6 @@ public class Bite : MonoBehaviour
     public static Bite instance;
 
     /// <summary>
-    /// The longest time it can take for a fish to bite
-    /// </summary>
-    [Tooltip("The longest time it can take for a fish to bite")]
-    public float MaxFishTime;
-    /// <summary>
-    /// The shortest time it can take for a fish to bite
-    /// </summary>
-    [Tooltip("The shortest time it can take for a fish to bite")]
-    public float MinFishTime;
-    /// <summary>
     /// The randomised time that the fish will bite at.
     /// </summary>
     float biteTime;
@@ -63,7 +53,7 @@ public class Bite : MonoBehaviour
             if (fishTimer >= biteTime)
                 ReelBegin();
         }
-        //
+        //Progress the reel timer until the player presses an input
         else if (isReeling)
         {
             reelTimer += Time.deltaTime;
@@ -81,18 +71,22 @@ public class Bite : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Generates a random time that the fish will bite and begins the fishing timer
+    /// </summary>
     public void StartPhase()
     {
         fishTimer = 0;
         reelTimer = 0;
 
         isFishing = true;
-        biteTime = Random.Range(MinFishTime, MaxFishTime);
+        biteTime = Random.Range(FishingManager.instance.fish.MinFishTime, FishingManager.instance.fish.MaxFishTime);
     }
 
     public void ReelBegin()
     {
         Debug.Log("A fish took the bait!");
+        FishingManager.instance.BiteEvent.Invoke();
         isFishing = false;
         isReeling = true;
     }
@@ -100,6 +94,7 @@ public class Bite : MonoBehaviour
     public void ReelFailed()
     {
         Debug.Log("The fish got away...");
+        FishingManager.instance.EscapeEvent.Invoke();
         isReeling = false;
 
         //Let the manager know you can begin fishing again

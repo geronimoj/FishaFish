@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 /// <summary>
@@ -10,8 +12,10 @@ public class FishingManager : MonoBehaviour
     /// <summary>
     /// A reference to the instance with the correct settings
     /// </summary>
+    [HideInInspector]
     public static FishingManager instance;
 
+    #region Phases
     enum fishingPhase
     {
         Approach,
@@ -19,6 +23,32 @@ public class FishingManager : MonoBehaviour
         Catch
     }
     fishingPhase currentPhase;
+    /// <summary>
+    /// Add events that occur when the player starts fishing
+    /// </summary>
+    [InfoBox("Add events that occur when the player starts fishing")]
+    public UnityEvent CastEvent;
+    /// <summary>
+    /// Add events that occur when the fish bites the lure
+    /// </summary>
+    [InfoBox("Add events that occur when the fish bites the lure")]
+    public UnityEvent BiteEvent;
+    /// <summary>
+    /// Add events that occur when the fish escapes
+    /// </summary>
+    [InfoBox("Add events that occur when the fish escapes")]
+    public UnityEvent EscapeEvent;
+    /// <summary>
+    /// Add events that occur when you enter the catch phase
+    /// </summary>
+    [InfoBox("Add events that occur when you enter the catch phase")]
+    public UnityEvent BeginCatchEvent;
+    /// <summary>
+    /// Add events that occur when you successfully catch the fish
+    /// </summary>
+    [InfoBox("Add events that occur when you successfully catch the fish")]
+    public UnityEvent FinishCatchEvent;
+    #endregion
 
     /// <summary>
     /// Unlike the Bite script's isFishing, this boolean is just to avoid interactions between scripts while the player is fishing
@@ -26,6 +56,12 @@ public class FishingManager : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public static bool fishing;
+
+    /// <summary>
+    /// The fish that will bite
+    /// </summary>
+    [HideInInspector]
+    public Fish fish;
 
     public void Start()
     {
@@ -55,9 +91,11 @@ public class FishingManager : MonoBehaviour
     {
         //Prevent anything other than fishing
         fishing = true;
+        fish = AvailableFishManager.instance.GetFish();
 
         NextPhase();
         Debug.Log("You cast the lure out!");
+        CastEvent.Invoke();
     }
 
     public void NextPhase()
@@ -71,6 +109,7 @@ public class FishingManager : MonoBehaviour
 
             case fishingPhase.Bite:
                 currentPhase = fishingPhase.Catch;
+                BeginCatchEvent.Invoke();
                 Catch.instance.BeginCatch();
                 break;
         }
@@ -79,6 +118,7 @@ public class FishingManager : MonoBehaviour
     public void FinishFishing()
     {
         fishing = false;
+        fish = null;
         currentPhase = fishingPhase.Approach;
     }
 }
