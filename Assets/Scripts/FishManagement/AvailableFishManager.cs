@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Environment;
+using Sirenix.OdinInspector;
 
 public class AvailableFishManager : MonoBehaviour
 {
@@ -135,6 +136,16 @@ public class AvailableFishManager : MonoBehaviour
 
 		return s.FishInSet[Random.Range(0, s.FishInSet.Length)];
 	}
+
+    /// <summary>
+    /// Clears all fish caught so that you can catch them again
+    /// TESTING ONLY
+    /// </summary>
+    [Button]
+    private void ResetFishCaught()
+    {
+        caughtFish.Clear();
+    }
 
 #if UNITY_EDITOR
 	//TODO: Make function to load all fish in editor to stop us from dragging shizzle

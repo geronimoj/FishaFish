@@ -813,6 +813,14 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3028760088862623137, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028760088862623138, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3194160923885567521, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -857,9 +865,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3353714950340983668, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515267662391303010, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6723492156740683535, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
       propertyPath: m_Name
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587768679746081509, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6ffdcb066e2494cbbcdaa4b896aa91, type: 3}
@@ -1721,6 +1741,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.data[0].set
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f4997d96ddab634c93b29396e5a2e3a, type: 2}
     - target: {fileID: 3328749524257735538, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: m_Name
       value: FishingManager
