@@ -150,6 +150,22 @@ public class AvailableFishManager : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-	//TODO: Make function to load all fish in editor to stop us from dragging shizzle
+	//TODO: Make function to load all fish in editor to stop us from dragging shizzle[Sirenix.OdinInspector.Button]
+	private void NukeMySave()
+	{
+		PlayerPrefs.DeleteAll();
+
+		var allFish = UnityEditor.AssetDatabase.FindAssets("t:Fish");
+
+		foreach(var guid in allFish)
+        {
+			string path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+
+			Fish fish = UnityEditor.AssetDatabase.LoadAssetAtPath<Fish>(path);
+
+			if (fish)
+				fish.Caught = false;
+        }
+	}
 #endif
 }
