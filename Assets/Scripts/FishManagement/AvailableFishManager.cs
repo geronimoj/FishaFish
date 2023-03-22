@@ -81,7 +81,8 @@ public class AvailableFishManager : MonoBehaviour
 
 	void LoadCaughtFish()
 	{
-		foreach (var f in allFish)
+
+        foreach (var f in allFish)
 		{
 			if (PlayerPrefs.GetInt(f.FishName, 0) == 1)
 			{
@@ -140,11 +141,12 @@ public class AvailableFishManager : MonoBehaviour
     /// <summary>
     /// Clears all fish caught so that you can catch them again
     /// TESTING ONLY
+    /// ALSO DOESN'T WORK
     /// </summary>
     [Button]
     private void ResetFishCaught()
     {
-        caughtFish.Clear();
+        //caughtFish.Clear();
     }
 
 #if UNITY_EDITOR
