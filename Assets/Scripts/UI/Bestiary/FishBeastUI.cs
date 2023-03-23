@@ -41,7 +41,8 @@ namespace Fishing.UI
 
         private void OnDestroy()
         {
-            _fish.OnCatch -= OnFishCaught;
+            if (_fish)
+                _fish.OnCatch -= OnFishCaught;
         }
 
         private void OnFishCaught()

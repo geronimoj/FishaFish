@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 namespace Fishing.UI
@@ -9,13 +10,25 @@ namespace Fishing.UI
     {
         [SerializeField] FishSetUI _fishSetUIPrefab = null;
         [SerializeField] FishSet[] _allFish = null;
-        [SerializeField] Grid _fishSetParent = null;
+        [SerializeField] LayoutGroup _fishSetParent = null;
 
         bool _initialized = false;
 
         public UnityEvent onOpen = null;
         public UnityEvent onClose = null;
 
+        private void Start()
+        {
+            Close();
+        }
+
+        public void Toggle()
+        {
+            if (gameObject.activeSelf)
+                Close();
+            else
+                Open();
+        }
         /// <summary>
         /// Open the bestiary
         /// </summary>

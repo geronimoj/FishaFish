@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 namespace Fishing.UI
@@ -11,7 +12,7 @@ namespace Fishing.UI
     public class FishSetUI : MonoBehaviour
     {
         [SerializeField] FishBeastUI _fishUIPrefab = null;
-        [SerializeField] Grid _fishParent = null;
+        [SerializeField] LayoutGroup _fishParent = null;
         [SerializeField] TMP_Text _setName = null;
 
         FishSet _set = null;
