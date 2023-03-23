@@ -67,7 +67,7 @@ public class Catch : MonoBehaviour
 
     public void Update()
     {
-        if (CatchType == catchType.RangeCatch)
+        if (CatchType == catchType.RangeCatch && FishingManager.instance.CurrentPhase == FishingManager.fishingPhase.Catch)
         {
 
         }
@@ -86,6 +86,7 @@ public class Catch : MonoBehaviour
                 break;
 
             case catchType.RangeCatch:
+                //Make the UI appear
                 break;
         }
     }

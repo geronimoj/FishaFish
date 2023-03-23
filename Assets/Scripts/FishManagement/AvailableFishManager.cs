@@ -138,19 +138,9 @@ public class AvailableFishManager : MonoBehaviour
 		return s.FishInSet[Random.Range(0, s.FishInSet.Length)];
 	}
 
-    /// <summary>
-    /// Clears all fish caught so that you can catch them again
-    /// TESTING ONLY
-    /// ALSO DOESN'T WORK
-    /// </summary>
-    [Button]
-    private void ResetFishCaught()
-    {
-        //caughtFish.Clear();
-    }
-
 #if UNITY_EDITOR
-	//TODO: Make function to load all fish in editor to stop us from dragging shizzle[Sirenix.OdinInspector.Button]
+    //TODO: Make function to load all fish in editor to stop us from dragging shizzle
+    [Sirenix.OdinInspector.Button]
 	private void NukeMySave()
 	{
 		PlayerPrefs.DeleteAll();

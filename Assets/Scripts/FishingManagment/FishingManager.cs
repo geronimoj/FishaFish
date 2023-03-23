@@ -16,13 +16,19 @@ public class FishingManager : MonoBehaviour
     public static FishingManager instance;
 
     #region Phases
-    enum fishingPhase
+    public enum fishingPhase
     {
         Approach,
         Bite,
         Catch
     }
     fishingPhase currentPhase;
+
+    public fishingPhase CurrentPhase
+    {
+        get { return currentPhase; }
+    }
+
     /// <summary>
     /// Add events that occur when the player starts fishing
     /// </summary>
@@ -63,6 +69,20 @@ public class FishingManager : MonoBehaviour
     [HideInInspector]
     public Fish fish;
 
+    /// <summary>
+    /// The time it takes for the player to begin fishing again once they catch a fish
+    /// This is to prevent the player from starting fishing with the same input that caught the fish
+    /// </summary>
+    private float fishBuffer = 0.1f;
+    /// <summary>
+    /// When this >= bufferTime, the player can begin fishing again
+    /// </summary>
+    private float bufferTime;
+    /// <summary>
+    /// Determines if the fishBuffer should be counting up
+    /// </summary>
+    private bool buffering;
+
     public void Start()
     {
         //Make sure only one instance of this script exists
@@ -78,9 +98,19 @@ public class FishingManager : MonoBehaviour
     public void Update()
     {
         //Begins fishing when the player presses the space bar
-        if (Input.GetKeyDown(KeyCode.Space) && !fishing)
+        if (Input.GetKeyDown(KeyCode.Space) && !fishing && !buffering)
         {
             StartFishing();
+        }
+        if (buffering)
+        {
+            bufferTime += Time.deltaTime;
+
+            if(bufferTime >= fishBuffer)
+            {
+                buffering = false;
+                bufferTime = 0;
+            }
         }
     }
 
@@ -117,6 +147,7 @@ public class FishingManager : MonoBehaviour
 
     public void FinishFishing()
     {
+        buffering = true;
         fishing = false;
         fish = null;
         currentPhase = fishingPhase.Approach;
