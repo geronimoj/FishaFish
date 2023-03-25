@@ -18,3 +18,4 @@ MonoBehaviour:
   MaxFishTime: 2
   MinFishTime: 2
   FishRange: 5
+  FishSpeed: 7
