@@ -10,6 +10,7 @@ namespace Fishing.UI
     {
         public static FishingMinigameUI Instance = null;
 
+        [SerializeField] RectTransform backGround = null;
         [SerializeField] RectTransform catchBar = null;
         [SerializeField] RectTransform fishBar = null;
 
@@ -46,12 +47,17 @@ namespace Fishing.UI
             Catch catchManager = Catch.instance;
 
             float progress = catchManager.catchProgress / catchManager.ProgressRequired;
+            float size = backGround.rect.width;
 
-            catchBar.localPosition = new Vector3(catchManager.RangePos, 0);
-            catchBar.sizeDelta = new Vector2(catchManager.CatchRange, fishBar.sizeDelta.y);
+            float percent = catchManager.RangePos / catchManager.CatchBarMax;
+            catchBar.anchoredPosition = new Vector3(percent * size, 0);
+            percent = catchManager.CatchRange / catchManager.CatchBarMax;
+            catchBar.sizeDelta = new Vector2(percent * size, fishBar.sizeDelta.y);
 
-            fishBar.localPosition = new Vector3(catchManager.FishPos, 0);
-            fishBar.sizeDelta = new Vector2(FishingManager.instance.fish.FishRange, fishBar.sizeDelta.y);
+            percent = catchManager.FishPos / catchManager.CatchBarMax;
+            fishBar.anchoredPosition = new Vector3(percent * size, 0);
+            percent = FishingManager.instance.fish.FishRange / catchManager.CatchBarMax;
+            fishBar.sizeDelta = new Vector2(percent * size, fishBar.sizeDelta.y);
 
             progressSlider.value = progress;
         }
