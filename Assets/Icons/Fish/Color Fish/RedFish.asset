@@ -16,7 +16,7 @@ MonoBehaviour:
   fishDescription: You would think the red fish would be hostile, but this fish actually
     loves to knit!
   fishIcon: {fileID: 21300000, guid: 382d96b0ba2c9d448943251f618c9c62, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 10
+  MinFishTime: 5
   FishRange: 5
   FishSpeed: 5

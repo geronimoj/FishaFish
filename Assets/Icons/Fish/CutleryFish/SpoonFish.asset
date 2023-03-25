@@ -16,7 +16,7 @@ MonoBehaviour:
   fishDescription: It uses it's tail to dig holes in the sand, which it can then
     burrow in!
   fishIcon: {fileID: 21300000, guid: 290861985185dc74c997b2cb573526f9, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 8
+  MinFishTime: 14
   FishRange: 5
   FishSpeed: 3

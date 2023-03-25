@@ -16,7 +16,7 @@ MonoBehaviour:
   fishDescription: Someone got to this fish before you. Or maybe it was just born
     this way?
   fishIcon: {fileID: 21300000, guid: 18d84f2bd4f026144a9a48c1bef2dc94, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 12
+  MinFishTime: 20
   FishRange: 5
   FishSpeed: 1
