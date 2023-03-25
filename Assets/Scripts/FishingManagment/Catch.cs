@@ -60,7 +60,7 @@ public class Catch : MonoBehaviour
     /// How fast the catch range moves in the catch bar
     /// </summary>
     [Tooltip("How fast the catch range moves in the catch bar")]
-    [Range(1,20)]
+    [Range(1,10)]
     public float RangeSpeed;
     /// <summary>
     /// the position of the centre of the player's catch range
