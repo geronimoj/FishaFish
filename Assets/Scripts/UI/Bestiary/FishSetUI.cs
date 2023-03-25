@@ -12,7 +12,7 @@ namespace Fishing.UI
     public class FishSetUI : MonoBehaviour
     {
         [SerializeField] FishBeastUI _fishUIPrefab = null;
-        [SerializeField] LayoutGroup _fishParent = null;
+        [SerializeField] Transform _fishParent = null;
         [SerializeField] TMP_Text _setName = null;
 
         FishSet _set = null;
@@ -22,7 +22,7 @@ namespace Fishing.UI
         {   // Initialize Fish
             foreach (var fish in set.FishInSet)
             {
-                var ui = Instantiate(_fishUIPrefab, _fishParent.transform);
+                var ui = Instantiate(_fishUIPrefab, _fishParent);
                 ui.Initialize(fish);
             }
 

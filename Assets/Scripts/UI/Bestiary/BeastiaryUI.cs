@@ -10,7 +10,7 @@ namespace Fishing.UI
     {
         [SerializeField] FishSetUI _fishSetUIPrefab = null;
         [SerializeField] FishSet[] _allFish = null;
-        [SerializeField] LayoutGroup _fishSetParent = null;
+        [SerializeField] Transform _fishSetParent = null;
 
         bool _initialized = false;
 
@@ -60,7 +60,7 @@ namespace Fishing.UI
             // Initialize the sets in UI
             foreach(var set in _allFish)
             {
-                var ui = Instantiate(_fishSetUIPrefab, _fishSetParent.transform);
+                var ui = Instantiate(_fishSetUIPrefab, _fishSetParent);
                 ui.Initialize(set);
             }
         }

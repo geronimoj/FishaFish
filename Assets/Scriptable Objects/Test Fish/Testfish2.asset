@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Fast Fish
   fishDescription: Fish FAST
-  fishIcon: {fileID: 0}
+  fishIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   MaxFishTime: 5
   MinFishTime: 2
   FishRange: 2

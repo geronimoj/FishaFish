@@ -68,11 +68,17 @@ public class AvailableFishManager : MonoBehaviour
 
 		instance = this;
 
+		for (int i = 0; i < fishSetData.Length; i++)
+		{
+			fishSetData[i].set = Instantiate(fishSetData[i].set);
+		}
+
 		foreach (var s in fishSetData)
 		{
-			foreach (var f in s.set.FishInSet)
+			for (int i = 0; i < s.set.FishInSet.Length; i++)
 			{
-				allFish.Add(f);
+				s.set.FishInSet[i] = Instantiate(s.set.FishInSet[i]);
+				allFish.Add(s.set.FishInSet[i]);
 			}
 		}
 
@@ -81,7 +87,6 @@ public class AvailableFishManager : MonoBehaviour
 
 	void LoadCaughtFish()
 	{
-
         foreach (var f in allFish)
 		{
 			if (PlayerPrefs.GetInt(f.FishName, 0) == 1)
