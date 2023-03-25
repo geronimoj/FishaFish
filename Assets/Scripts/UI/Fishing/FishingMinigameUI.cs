@@ -40,6 +40,7 @@ namespace Fishing.UI
         /// </summary>
         private void RefreshUI()
         {
+            return;
             Catch catchManager = Catch.instance;
 
             float progress = catchManager.catchProgress / catchManager.ProgressRequired;
