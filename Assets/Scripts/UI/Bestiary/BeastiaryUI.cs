@@ -18,7 +18,8 @@ namespace Fishing.UI
         public UnityEvent onClose = null;
 
         private void Start()
-        {
+        {   // Close UI when we start fishing
+            FishingManager.instance.CastEvent.AddListener(Close);
             Close();
         }
 
@@ -33,7 +34,10 @@ namespace Fishing.UI
         /// Open the bestiary
         /// </summary>
         public void Open()
-        {
+        {   // Don't allow opening if fishing
+            if (FishingManager.fishing)
+                return;
+
             gameObject.SetActive(true);
 
             Initialize();

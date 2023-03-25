@@ -122,7 +122,8 @@ public class FishingManager : MonoBehaviour
         //Prevent anything other than fishing
         fishing = true;
         fish = AvailableFishManager.instance.GetFish();
-
+        // Prep the UI for fishing
+        Fishing.UI.FishingMinigameUI.Instance.Initialize(fish);
         NextPhase();
         Debug.Log("You cast the lure out!");
         CastEvent.Invoke();
