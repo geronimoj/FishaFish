@@ -33,6 +33,12 @@ public class Fish : ScriptableObject
     /// </summary>
     [Tooltip("The space that the fish occupies in the catch bar")]
     public float FishRange = 5;
+    /// <summary>
+    /// How fast the fish moves in comparison to the catch range
+    /// </summary>
+    [Tooltip("How fast the fish moves in comparison to the catch range")]
+    [Range(1, 20f)]
+    public float FishSpeed;
 
     public bool Caught
     {

@@ -48,7 +48,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CastEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fish
+          m_BoolArgument: 0
+        m_CallState: 2
   BiteEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -60,7 +72,19 @@ MonoBehaviour:
       m_Calls: []
   FinishCatchEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fish
+          m_BoolArgument: 0
+        m_CallState: 2
   fish: {fileID: 0}
 --- !u!114 &3328749524257735536
 MonoBehaviour:
@@ -87,10 +111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337ca57a54f97c640ab6bb7a069c20e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CatchType: 0
-  ProgressRequired: 100
+  CatchType: 1
+  catchProgress: 0
+  ProgressRequired: 6
   CatchBarMax: 50
   CatchRange: 10
+  RangeSpeed: 10
+  DecisionTime: 1
 --- !u!114 &3328749524257735503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +130,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fb59e1826395048859559a064c2052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSetData: []
+  fishSetData:
+  - set: {fileID: 11400000, guid: 39fbcec1137ea084c87e0758a29b8b4f, type: 2}
+    furnitureToEnable: {fileID: 0}
+  - set: {fileID: 11400000, guid: 4f2c02aa0f4d126449eef92f8cdcc39c, type: 2}
+    furnitureToEnable: {fileID: 0}
+  - set: {fileID: 11400000, guid: 9db880c82fa385249a0940dd96cc2c86, type: 2}
+    furnitureToEnable: {fileID: 0}
+  - set: {fileID: 11400000, guid: 346186c45c528e24b8f9c949449ad7e7, type: 2}
+    furnitureToEnable: {fileID: 0}
+  - set: {fileID: 11400000, guid: 05d03b6408aa9c845a74f6ac68c30cd3, type: 2}
+    furnitureToEnable: {fileID: 0}
+  - set: {fileID: 11400000, guid: 4dbc084674ad57b408a8652d4df20ec9, type: 2}
+    furnitureToEnable: {fileID: 0}
   OnGameFinished:
     m_PersistentCalls:
       m_Calls: []

@@ -3346,5 +3346,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishingManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3328749524257735539, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: CatchType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328749524257735539, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: RangeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328749524257735539, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: ProgressRequired
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
