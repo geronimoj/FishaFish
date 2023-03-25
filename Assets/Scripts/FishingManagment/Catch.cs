@@ -162,6 +162,7 @@ public class Catch : MonoBehaviour
                 break;
 
             case catchType.RangeCatch:
+                Debug.Log("CATCH THE FISH!!");
                 rangePosition = CatchRange / 2;
                 fishPosition = CatchBarMax / 2;
                 
