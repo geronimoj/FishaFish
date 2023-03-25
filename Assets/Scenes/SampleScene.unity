@@ -3431,27 +3431,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1283438257484664769, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3504,6 +3504,14 @@ PrefabInstance:
     - target: {fileID: 7016835697462632910, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
       propertyPath: m_Name
       value: FishingMinigameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151121298493514718, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151121298493514718, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b07fac08a1a6464296765dfbde93030, type: 3}
