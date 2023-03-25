@@ -83,15 +83,18 @@ public class FishingManager : MonoBehaviour
     /// </summary>
     private bool buffering;
 
-    public void Start()
+    private void Awake()
     {
-        //Make sure only one instance of this script exists
-        //FishingManager holds some settings for the minigame's design and more than manager may mess with a user's fishing settings
         if (instance == null)
             instance = this;
         else if (instance != null && instance != this)
             Destroy(this.gameObject);
+    }
 
+    public void Start()
+    {
+        //Make sure only one instance of this script exists
+        //FishingManager holds some settings for the minigame's design and more than manager may mess with a user's fishing settings
         currentPhase = fishingPhase.Approach;
     }
 
@@ -122,7 +125,8 @@ public class FishingManager : MonoBehaviour
         //Prevent anything other than fishing
         fishing = true;
         fish = AvailableFishManager.instance.GetFish();
-
+        // Prep the UI for fishing
+        Fishing.UI.FishingMinigameUI.Instance.Initialize(fish);
         NextPhase();
         Debug.Log("You cast the lure out!");
         CastEvent.Invoke();

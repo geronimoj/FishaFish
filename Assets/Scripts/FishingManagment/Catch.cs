@@ -70,7 +70,10 @@ public class Catch : MonoBehaviour
     /// The position of the centre of the fish
     /// </summary>
     float fishPosition;
-   
+
+    public float FishPos => fishPosition;
+    public float RangePos => rangePosition;
+
     /// <summary>
     /// The time before the fish decides their movement direction
     /// </summary>
