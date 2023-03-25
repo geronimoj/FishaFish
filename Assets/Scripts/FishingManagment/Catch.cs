@@ -137,6 +137,8 @@ public class Catch : MonoBehaviour
                 //Decrease the progress meter as there is no overlap
                 catchProgress -= Time.deltaTime;
 
+            catchProgress = Mathf.Clamp(catchProgress, 0, ProgressRequired);
+
             //Check if the progress required has been met
             if(catchProgress >= ProgressRequired)
             {

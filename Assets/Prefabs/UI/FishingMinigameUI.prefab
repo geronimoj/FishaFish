@@ -109,8 +109,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 61.59, y: 10}
-  m_Pivot: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 61.589996, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1130549777798097311
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 7}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7016835697462632910
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23078b1a77b02c04482fb1d79254232a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backGround: {fileID: 151824512775479433}
   catchBar: {fileID: 2347917462462589914}
   fishBar: {fileID: 3411650475943299022}
   progressSlider: {fileID: 1643419682773270131}
