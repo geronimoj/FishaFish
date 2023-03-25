@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8d72d2072917b4f9bb0a0a3eabe05d, type: 3}
+  m_Name: SkyFish Set
+  m_EditorClassIdentifier: 
+  setName: Sky
+  fishInSet:
+  - {fileID: 11400000, guid: cc230044d2f1a3a4e8f971429fe52561, type: 2}
+  - {fileID: 11400000, guid: 2070ea48dc2ffcc4ea193b3c7fdd205c, type: 2}
+  - {fileID: 11400000, guid: cee54b06534b6314cbf1efa315fa463c, type: 2}
+  - {fileID: 11400000, guid: cf77e6749404ead469f039b0ac33177b, type: 2}
+  - {fileID: 11400000, guid: df459e836cee6154e9542c191670391f, type: 2}

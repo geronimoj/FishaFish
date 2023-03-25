@@ -3252,7 +3252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: fishSetData.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: fishSetData.Array.data[0].set
@@ -3274,6 +3274,10 @@ PrefabInstance:
       propertyPath: fishSetData.Array.data[4].set
       value: 
       objectReference: {fileID: 11400000, guid: 05d03b6408aa9c845a74f6ac68c30cd3, type: 2}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.data[5].set
+      value: 
+      objectReference: {fileID: 11400000, guid: 4dbc084674ad57b408a8652d4df20ec9, type: 2}
     - target: {fileID: 3328749524257735537, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: CastEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
