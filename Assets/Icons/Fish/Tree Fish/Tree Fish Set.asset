@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8d72d2072917b4f9bb0a0a3eabe05d, type: 3}
+  m_Name: Tree Fish Set
+  m_EditorClassIdentifier: 
+  setName: Trees
+  fishInSet:
+  - {fileID: 11400000, guid: 1f5a39d5e2cb40a4c845ba880e9dda57, type: 2}
+  - {fileID: 11400000, guid: 1c86ceaed00c1d44fb3be26f8243800b, type: 2}
+  - {fileID: 11400000, guid: 1d515f517975991438bc13534c1bb12d, type: 2}
+  - {fileID: 11400000, guid: 495046900f4a9174fbdd76220f04e1f8, type: 2}

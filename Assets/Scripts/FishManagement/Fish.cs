@@ -21,18 +21,18 @@ public class Fish : ScriptableObject
     /// The longest time it can take for a fish to bite
     /// </summary>
     [Tooltip("The longest time it can take for a fish to bite")]
-    public float MaxFishTime;
+    public float MaxFishTime = 2;
     /// <summary>
     /// The shortest time it can take for a fish to bite
     /// </summary>
     [Tooltip("The shortest time it can take for a fish to bite")]
-    public float MinFishTime;
+    public float MinFishTime = 2;
 
     /// <summary>
     /// The space that the fish occupies in the catch bar
     /// </summary>
     [Tooltip("The space that the fish occupies in the catch bar")]
-    public float FishRange;
+    public float FishRange = 5;
 
     public bool Caught
     {

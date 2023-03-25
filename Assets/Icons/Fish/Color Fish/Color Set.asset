@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8d72d2072917b4f9bb0a0a3eabe05d, type: 3}
+  m_Name: Color Set
+  m_EditorClassIdentifier: 
+  setName: Color
+  fishInSet:
+  - {fileID: 11400000, guid: 46c3cced03083254f9bb70a4413dd354, type: 2}
+  - {fileID: 11400000, guid: 98c8764dbd161cb4ca9980491ab1d426, type: 2}
+  - {fileID: 11400000, guid: 9ad218882b8608347887aa0ea89ad6ab, type: 2}
+  - {fileID: 11400000, guid: 1827af13030a6b048bb375e53d901ccf, type: 2}
+  - {fileID: 11400000, guid: 55b503680c41f97478a84a4c2bddf2a1, type: 2}
+  - {fileID: 11400000, guid: b1350eaaf5db96c43b5cdbdde7f53d54, type: 2}

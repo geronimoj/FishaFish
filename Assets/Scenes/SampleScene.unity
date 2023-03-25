@@ -3252,12 +3252,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: fishSetData.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: fishSetData.Array.data[0].set
       value: 
-      objectReference: {fileID: 11400000, guid: 6f4997d96ddab634c93b29396e5a2e3a, type: 2}
+      objectReference: {fileID: 11400000, guid: 39fbcec1137ea084c87e0758a29b8b4f, type: 2}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.data[1].set
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f2c02aa0f4d126449eef92f8cdcc39c, type: 2}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.data[2].set
+      value: 
+      objectReference: {fileID: 11400000, guid: 9db880c82fa385249a0940dd96cc2c86, type: 2}
+    - target: {fileID: 3328749524257735503, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
+      propertyPath: fishSetData.Array.data[3].set
+      value: 
+      objectReference: {fileID: 11400000, guid: 346186c45c528e24b8f9c949449ad7e7, type: 2}
     - target: {fileID: 3328749524257735537, guid: 33fb50011166df5449f84f75345c7db4, type: 3}
       propertyPath: CastEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8d72d2072917b4f9bb0a0a3eabe05d, type: 3}
+  m_Name: SizeFish Set
+  m_EditorClassIdentifier: 
+  setName: Size
+  fishInSet:
+  - {fileID: 11400000, guid: 3ab139debc77c414b905c9f653a465fb, type: 2}
+  - {fileID: 11400000, guid: b3fb1f414f1b2e24d9f7eb73881a22bd, type: 2}
+  - {fileID: 11400000, guid: 2fd3a4052352c454a8d3d3495b80fa44, type: 2}
+  - {fileID: 11400000, guid: 5c34a2578ca95904b92db6699f951000, type: 2}
+  - {fileID: 11400000, guid: 1c7d36d10d79f2a4b893e5b9186b7996, type: 2}
+  - {fileID: 11400000, guid: 11632d04f8e94274a87fed1015a571f0, type: 2}
