@@ -40,13 +40,15 @@ namespace Fishing.UI
         /// </summary>
         private void RefreshUI()
         {
-            return;
             Catch catchManager = Catch.instance;
 
             float progress = catchManager.catchProgress / catchManager.ProgressRequired;
 
             catchBar.localPosition = new Vector3(0, catchManager.RangePos);
+            catchBar.sizeDelta = new Vector2(catchManager.CatchRange, fishBar.sizeDelta.y);
+
             fishBar.localPosition = new Vector3(0, catchManager.RangePos);
+            fishBar.sizeDelta = new Vector2(FishingManager.instance.fish.FishRange, fishBar.sizeDelta.y);
 
             progressSlider.value = progress;
         }
