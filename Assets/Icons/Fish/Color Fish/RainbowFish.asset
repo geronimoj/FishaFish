@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Rainbow Fish
   fishDescription: Some fish like to act like they are cooler then other fish.
   fishIcon: {fileID: 21300000, guid: 07dbd303cdce9e649889be26188d8349, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 10
+  MinFishTime: 5
   FishRange: 5
+  FishSpeed: 5

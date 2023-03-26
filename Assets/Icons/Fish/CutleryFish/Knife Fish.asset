@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Knife fish
   fishDescription: Not the same as a dagger fish.
   fishIcon: {fileID: 21300000, guid: d7218922b7b01544ca7a8ee10f66b8a5, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 1
+  MinFishTime: 5
   FishRange: 5
+  FishSpeed: 7

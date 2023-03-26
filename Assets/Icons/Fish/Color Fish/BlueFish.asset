@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Blue Fish
   fishDescription: These creatures are hard to spot under the water.
   fishIcon: {fileID: 21300000, guid: 95ad165bdb6d98446a4c989a35b12cbe, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 10
+  MinFishTime: 5
   FishRange: 5
+  FishSpeed: 5

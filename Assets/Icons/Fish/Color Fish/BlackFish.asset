@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Black Fish
   fishDescription: One of the most common types of fish.
   fishIcon: {fileID: 21300000, guid: 1a4a8c4c0ff960f49b468c7320419c50, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 10
+  MinFishTime: 5
   FishRange: 5
+  FishSpeed: 5
