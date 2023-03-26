@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Sun Fish
   fishDescription: Didn't expect a regular fish did you?
   fishIcon: {fileID: 21300000, guid: b8a82d542c12d15478a1f9dd83fe28ce, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 5
+  MinFishTime: 10
   FishRange: 5
+  FishSpeed: 5

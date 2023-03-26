@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Moon Fish
   fishDescription: Tastes like cheese!
   fishIcon: {fileID: 21300000, guid: 913e9c30b55d850428487b9914f56bda, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
-  FishRange: 5
+  MaxFishTime: 15
+  MinFishTime: 10
+  FishRange: 8
+  FishSpeed: 3

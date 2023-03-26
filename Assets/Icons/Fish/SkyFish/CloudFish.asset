@@ -16,6 +16,7 @@ MonoBehaviour:
   fishDescription: A gelatonous substance follows the main body, making it look like
     rain.
   fishIcon: {fileID: 21300000, guid: e8dadc36a436d7e4c8c4e5e826bfa747, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 15
+  MinFishTime: 10
   FishRange: 5
+  FishSpeed: 5

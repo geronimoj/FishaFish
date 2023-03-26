@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Flying Fish
   fishDescription: Found under the water or in the sky.
   fishIcon: {fileID: 21300000, guid: 1d57907eaab6beb49ad522d43019d57e, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
-  FishRange: 5
+  MaxFishTime: 8
+  MinFishTime: 3
+  FishRange: 4
+  FishSpeed: 8

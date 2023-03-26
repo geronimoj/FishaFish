@@ -16,6 +16,7 @@ MonoBehaviour:
   fishDescription: Don't let their popularity fool you. These fish are made of pure
     evil.
   fishIcon: {fileID: 21300000, guid: a4819b064d22c7544b2bd4a0f7bed888, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
+  MaxFishTime: 10
+  MinFishTime: 5
   FishRange: 5
+  FishSpeed: 5

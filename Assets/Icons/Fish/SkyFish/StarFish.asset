@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Star Fish
   fishDescription: For legal reasons, this is a regular star fish.
   fishIcon: {fileID: 21300000, guid: ec6d744cf31d1944395af560da63ed26, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
-  FishRange: 5
+  MaxFishTime: 15
+  MinFishTime: 10
+  FishRange: 3
+  FishSpeed: 5

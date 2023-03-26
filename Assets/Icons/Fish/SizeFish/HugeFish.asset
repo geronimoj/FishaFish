@@ -16,6 +16,7 @@ MonoBehaviour:
   fishDescription: It's not the size of the fish which matters, but what you do with
     it that counts!
   fishIcon: {fileID: 21300000, guid: e53c3ae24be6a2849a25d76001a006dd, type: 3}
-  MaxFishTime: 2
-  MinFishTime: 2
-  FishRange: 5
+  MaxFishTime: 10
+  MinFishTime: 5
+  FishRange: 15
+  FishSpeed: 1.5
