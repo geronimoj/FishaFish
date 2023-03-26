@@ -9,7 +9,6 @@ namespace Fishing.UI
     public class BeastiaryUI : MonoBehaviour
     {
         [SerializeField] FishSetUI _fishSetUIPrefab = null;
-        [SerializeField] FishSet[] _allFish = null;
         [SerializeField] Transform _fishSetParent = null;
 
         bool _initialized = false;
@@ -62,8 +61,9 @@ namespace Fishing.UI
 
             _initialized = true;
             // Initialize the sets in UI
-            foreach(var set in _allFish)
+            foreach(var setData in AvailableFishManager.instance.FishSets)
             {
+                var set = setData.set;
                 var ui = Instantiate(_fishSetUIPrefab, _fishSetParent);
                 ui.Initialize(set);
             }

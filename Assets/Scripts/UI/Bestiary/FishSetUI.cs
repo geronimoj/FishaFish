@@ -19,18 +19,23 @@ namespace Fishing.UI
         bool _completedSet = false;
 
         public void Initialize(FishSet set)
-        {   // Initialize Fish
+        {
+            _set = set;
+            _completedSet = set.FinishedSet;
+
+            gameObject.SetActive(false);
+            // Initialize Fish
             foreach (var fish in set.FishInSet)
             {
                 var ui = Instantiate(_fishUIPrefab, _fishParent);
                 ui.Initialize(fish);
+
+                fish.OnCatch -= OnCatchFish;
+                fish.OnCatch += OnCatchFish;
             }
 
             if (_setName)
                 _setName.text = set ? set.SetName : null;
-
-            _set = set;
-            _completedSet = set.FinishedSet;
             // Make sure UI is correct
             if (_completedSet)
                 OnSetComplete();
@@ -44,6 +49,14 @@ namespace Fishing.UI
 
         private void OnSetComplete()
         {
+        }
+
+        private void OnCatchFish()
+        {   
+            if (_set.FinishedSet)
+                OnSetComplete();
+
+            gameObject.SetActive(true);
         }
     }
 }
