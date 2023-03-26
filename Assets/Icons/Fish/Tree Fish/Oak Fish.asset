@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: Oak Fish
   fishDescription: The mighty oak fish. Everyone wants to be an oak fish.
-  fishIcon: {fileID: 0}
+  fishIcon: {fileID: 21300000, guid: 6e42f19fb8beeca4ab832b65a466f65f, type: 3}
   MaxFishTime: 2
   MinFishTime: 2
   FishRange: 5
+  FishSpeed: 0
