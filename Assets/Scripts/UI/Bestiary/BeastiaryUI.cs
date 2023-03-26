@@ -10,6 +10,7 @@ namespace Fishing.UI
     {
         [SerializeField] FishSetUI _fishSetUIPrefab = null;
         [SerializeField] Transform _fishSetParent = null;
+        [SerializeField] GameObject[] _toggleAlt = null;
 
         bool _initialized = false;
 
@@ -41,6 +42,9 @@ namespace Fishing.UI
 
             Initialize();
 
+            foreach (var obj in _toggleAlt)
+                obj.SetActive(false);
+
             onOpen?.Invoke();
         }
         /// <summary>
@@ -49,6 +53,10 @@ namespace Fishing.UI
         public void Close()
         {
             gameObject.SetActive(false);
+
+            foreach (var obj in _toggleAlt)
+                obj.SetActive(true);
+
             onClose?.Invoke();
         }
         /// <summary>
