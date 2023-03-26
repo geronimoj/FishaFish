@@ -33,8 +33,10 @@ namespace Fishing.UI
                 _descriptionText.text = fish ? fish.FishDesciption : null;
 
             if (_fishIcon)
+            {
                 _fishIcon.sprite = fish ? fish.FishIcon : null;
-
+                _fishIcon.color = fish.Caught ? Color.white : Color.black;
+            }
             _fish = fish;
             _fish.OnCatch += OnFishCaught;
         }
@@ -48,6 +50,7 @@ namespace Fishing.UI
         private void OnFishCaught()
         {
             // Set UI to un hidden
+            _fishIcon.color = Color.white;
         }
     }
 }

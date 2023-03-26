@@ -16,6 +16,8 @@ public class AvailableFishManager : MonoBehaviour
 
 	[SerializeField] FishSetData[] fishSetData;
 
+	public FishSetData[] FishSets => fishSetData;
+
 	List<Fish> allFish = new List<Fish>();
 
 	List<Fish> caughtFish = new List<Fish>();
