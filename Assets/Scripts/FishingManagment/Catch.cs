@@ -180,6 +180,7 @@ public class Catch : MonoBehaviour
     {
         Debug.Log("You caught a " + FishingManager.instance.fish.FishName + "!");
         FishingManager.instance.FinishCatchEvent.Invoke();
+        FishingManager.instance.FinishCatchEventWfish.Invoke(FishingManager.instance.fish);
         catchProgress = 0;
 
         AvailableFishManager.instance.OnFishCaught(FishingManager.instance.fish);

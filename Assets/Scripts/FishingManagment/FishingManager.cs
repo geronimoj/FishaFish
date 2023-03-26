@@ -54,6 +54,9 @@ public class FishingManager : MonoBehaviour
     /// </summary>
     [InfoBox("Add events that occur when you successfully catch the fish")]
     public UnityEvent FinishCatchEvent;
+
+    [InfoBox("Add events that occur when you successfully catch the fish (stores the fish)")]
+    public UnityEvent<Fish> FinishCatchEventWfish;
     #endregion
 
     /// <summary>
@@ -62,6 +65,14 @@ public class FishingManager : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public static bool fishing;
+
+    //HEY DYLAN! ZACH ADDED THIS! FEEL FREE TO REMOVE OR CHANGE AS YOU WANT!!!!!!!!!! I'M GOING TO PUT A LONG COMMENT HERE SO YOU WILL SEE IT! WANNA SEE MY MICROWAVE IMPRESSION? MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM BEEP BEEP BEEP BEEP BEEP!
+    /// <summary>
+    /// If true, the player is able to start fishing, it is currently being turned off when the player catches a fish to stop them from
+    /// instantly recasting. It gets turned back on when they close the popup showing what fish they gained
+    /// </summary>
+    [HideInInspector] // Fun fact, HideInInspector doesn't need to be added because canFish is static! static variables will not appear in inspector
+    public static bool canFish;
 
     /// <summary>
     /// The fish that will bite
@@ -93,6 +104,7 @@ public class FishingManager : MonoBehaviour
 
     public void Start()
     {
+        canFish = true;
         //Make sure only one instance of this script exists
         //FishingManager holds some settings for the minigame's design and more than manager may mess with a user's fishing settings
         currentPhase = fishingPhase.Approach;
@@ -101,7 +113,7 @@ public class FishingManager : MonoBehaviour
     public void Update()
     {
         //Begins fishing when the player presses the space bar
-        if (Input.GetKeyDown(KeyCode.Space) && !fishing && !buffering)
+        if (canFish && Input.GetKeyDown(KeyCode.Space) && !fishing && !buffering)
         {
             StartFishing();
         }
