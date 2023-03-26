@@ -14,6 +14,7 @@ namespace Fishing.UI
         [SerializeField] FishBeastUI _fishUIPrefab = null;
         [SerializeField] Transform _fishParent = null;
         [SerializeField] TMP_Text _setName = null;
+        [SerializeField] GameObject _setFinishIcon = null;
 
         FishSet _set = null;
         bool _completedSet = false;
@@ -24,6 +25,7 @@ namespace Fishing.UI
             _completedSet = set.FinishedSet;
 
             gameObject.SetActive(false);
+            _setFinishIcon.SetActive(false);
             // Initialize Fish
             foreach (var fish in set.FishInSet)
             {
@@ -49,6 +51,7 @@ namespace Fishing.UI
 
         private void OnSetComplete()
         {
+            _setFinishIcon.SetActive(true);
         }
 
         private void OnCatchFish()

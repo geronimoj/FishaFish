@@ -184,8 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fishSetUIPrefab: {fileID: 1369781811679224002, guid: bca745b8fe9d8584cab65ea62fa6ae47, type: 3}
-  _allFish:
-  - {fileID: 11400000, guid: 6f4997d96ddab634c93b29396e5a2e3a, type: 2}
   _fishSetParent: {fileID: 8989883228492164021}
   onOpen:
     m_PersistentCalls:
@@ -407,7 +405,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
